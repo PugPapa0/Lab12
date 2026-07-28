@@ -20,16 +20,14 @@
  *********************************************/
 
 
-public class Main
-{
+public class Main {
 
   /***** CONSTANT SECTION *****/
 
   public static final int WIDTH = 30;
 
 
-  public static void main(String[] args)
-  {
+  public static void main(String[] args) {
     /***** DECLARATION SECTION *****/
 
     int number;
@@ -51,19 +49,16 @@ public class Main
 
     /***** INPUT + PROCESSING + OUTPUT SECTION *****/
 
-    while(again == 'Y')
-    {
+    while (again == 'Y') {
 
-      do
-      {
+      do {
         number = UtilityBelt.readInt("\nPlease enter a number between 0 and 999: ", -9999, 9999);
 
-        if(number < 0 || number > 999)
-        {
+        if (number < 0 || number > 999) {
           System.out.println("ERROR: please enter value between 0 - 999");
         }
 
-      } while(number < 0 || number > 999);
+      } while (number < 0 || number > 999);
 
 
       hundreds = number / 100;
@@ -103,52 +98,37 @@ public class Main
    *
    * @param knots number of knots to display
    */
-  public static void printKnots(int knots)
-  {
-    for(int i = 0; i < knots; i++)
-    {
+  public static void printKnots(int knots) {
+    for (int i = 0; i < knots; i++) {
       UtilityBelt.printCentered(WIDTH, "*");
     }
   }
-
 
 
   /**
    * Prints a digital quipu using hundreds, tens, and ones places.
    *
    * @param hundreds number of hundreds knots
-   * @param tens number of tens knots
-   * @param ones number of ones knots
+   * @param tens     number of tens knots
+   * @param ones     number of ones knots
    */
-  public static void printQuipu(int hundreds, int tens, int ones)
-  {
-
+  public static void printQuipu(int hundreds, int tens, int ones) {
     UtilityBelt.printCentered(WIDTH, "___");
 
-
     UtilityBelt.printCentered(WIDTH, "|");
-
 
     printKnots(hundreds);
 
-
     UtilityBelt.printCentered(WIDTH, "|");
-
 
     printKnots(tens);
 
-
     UtilityBelt.printCentered(WIDTH, "|");
-
 
     printKnots(ones);
 
-
     UtilityBelt.printCentered(WIDTH, "|");
 
-
-    UtilityBelt.printCentered(WIDTH, "‾");
-
+    UtilityBelt.printCentered(WIDTH, "\u203E");
   }
-
 }
