@@ -52,8 +52,7 @@ public class Main {
     while (again == 'Y') {
 
       do {
-        number = UtilityBelt.readInt("\nPlease enter a number between 0 and 999: ", -9999, 9999);
-
+        number = UtilityBelt.readInt("Please enter a number between 0 and 999: ", -9999, 9999);
         if (number < 0 || number > 999) {
           System.out.println("ERROR: please enter value between 0 - 999");
         }
@@ -65,8 +64,6 @@ public class Main {
       tens = (number / 10) % 10;
       ones = number % 10;
 
-
-      System.out.println();
 
       System.out.println("Hundreds   = " + hundreds);
       System.out.println("Tens       = " + tens);
