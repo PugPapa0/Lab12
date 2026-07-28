@@ -123,7 +123,7 @@ public class Main
   public static void printQuipu(int hundreds, int tens, int ones)
   {
 
-    UtilityBelt.printCentered(WIDTH, "---");
+    UtilityBelt.printCentered(WIDTH, "___");
 
 
     UtilityBelt.printCentered(WIDTH, "|");
